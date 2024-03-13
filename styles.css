@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'MyCustomFont'; /* Choose a font-family name */
+    src: url('Chalkduster.ttf') format('truetype'); /* Specify the path to your TTF file */
+}
+
+
+body{
+    background-image: url("background.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: 'MyCustomFont';
+}
+
+.content{
+    display: flex;
+    padding: 3%;
+}
+
+.bean-logo{
+    width: 60%;
+}
+
+.swiggy-logo{
+    width: 50%;
+    cursor: pointer;
+}
+
+.left-content{
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap : 60px;
+    width : 45%;
+}
+
+h1{
+    color : #85AD2C;
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.message-content{
+    color : #fff;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.coming-soon{
+    font-size: 1.5rem;
+    color : #fff;
+}
+
+.contact-us{
+    font-size: 1.2rem;
+    color : #fff;
+    margin: 0;
+}
+
+.number{
+    font-size: 1.3rem;
+    color : #85AD2C;
+    margin: 0;
+}
+
+.right-content{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+
+.swiggy-mini{
+    text-align: center;
+    margin-top: 30%;
+}
+
+.swiggy-mini p{
+    font-size: 2rem;
+    margin: 0;
+    color : #fff;
+}
+
+.contact{
+    width : 60%;
+}
+
+.soon{
+    color : #85AD2C;
+}
