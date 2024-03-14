@@ -1,20 +1,23 @@
 @font-face {
-    font-family: 'MyCustomFont'; /* Choose a font-family name */
-    src: url('Chalkduster.ttf') format('truetype'); /* Specify the path to your TTF file */
+    font-family: 'MyCustomFont';
+    src: url('Chalkduster.ttf') format('truetype');
 }
 
 
 body{
     background-color: #363939;
     background-image: url("background.png");
-    background-size: 100%;
+    /* background-size: cover; */
     background-repeat: no-repeat;
     font-family: 'MyCustomFont';
 }
 
 .content{
+    padding-left : 3.5%;
+    padding-right : 3.5%;
     display: flex;
-    padding: 3%;
+    padding-top: 2.5%;
+    justify-content: space-around;
 }
 
 .bean-logo{
@@ -24,17 +27,21 @@ body{
 .swiggy-logo{
     width: 50%;
     cursor: pointer;
+    margin-top: -5%;
+    /* margin-left : 5.5%; */
 }
 
 .left-content{
     padding-left: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap : 60px;
+    justify-content: space-around;
+    gap : 2rem;
     width : 45%;
 }
-
+.right-content {
+    text-align: center;
+}
 h1{
     color : #85AD2C;
     font-size: 3.5rem;
@@ -64,21 +71,15 @@ h1{
     margin: 0;
 }
 
-.right-content{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-}
-
 
 .swiggy-mini{
-    text-align: center;
+    /* text-align: center; */
     margin-top: 30%;
 }
 
 .swiggy-mini p{
     font-size: 2rem;
-    margin: 0;
+    /* margin-left : -4%; */
     color : #fff;
 }
 
@@ -88,4 +89,31 @@ h1{
 
 .soon{
     color : #85AD2C;
+}
+
+.basket-image {
+    width: 100%;
+}
+
+@media only screen and (max-width : 768px){
+    body{
+        background-image: url("background.png");
+        /* background-size: cover; */
+        /* background-position: 75% 75%; */
+    }
+    .content{
+        flex-direction: column;
+    }
+    .left-content{
+        padding-left: 0;
+        width : 100%;
+        text-align: center;
+    }
+    .contact{
+        width : 100%;
+    }
+
+    .logo{
+        text-align: left;
+    }
 }
