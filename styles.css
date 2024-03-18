@@ -4,11 +4,15 @@
 }
 
 body{
-    background-color: #363939;
-    background-image: url("images/background-without-basket.png");
-    /* background-size: cover; */
+    /* background-color: #363939; */
+    background-image: url("images/clear-bg.png");
+    background-size: cover;
     background-repeat: no-repeat;
     font-family: 'MyCustomFont';
+    margin : 0;
+    padding : 0;
+    overflow: hidden;
+    height: 100vh;
 }
 
 .content{
@@ -17,6 +21,16 @@ body{
     display: flex;
     padding-top: 2.5%;
     justify-content: space-around;
+    position : relative;
+    z-index: 1;
+    height : 70%;
+}
+
+.wood-image{
+    width : 100%;
+    position : absolute;
+    bottom : 0;
+    z-index: 0;
 }
 
 .bean-logo{
@@ -24,7 +38,7 @@ body{
 }
 
 .swiggy-logo{
-    width: 50%;
+    width: 40%;
     cursor: pointer;
     /* margin-top: -5%; */
     /* transition: transform 0.3s ease-in-out; */
@@ -45,16 +59,18 @@ body{
 }
 
 .left-content{
-    padding-left: 5%;
+    /* padding-left: 5%; */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width : 45%;
+    /* justify-content: space-around; */
+    gap : 6%;
+    width : 50%;
     /* gap : 2rem; */
     /* padding-bottom : 10%; */
 }
 .right-content {
     text-align: center;
+    max-width: 50%;
 }
 h1{
     color : #85AD2C;
@@ -88,7 +104,8 @@ h1{
 
 
 .swiggy-mini{
-    margin-top: 30%;
+    position: relative;
+    top : 25%;
 }
 
 .swiggy-mini p{
@@ -98,6 +115,7 @@ h1{
 
 .contact{
     width : 60%;
+    margin-top: 2rem;
 }
 
 .soon{
@@ -105,28 +123,102 @@ h1{
 }
 
 .basket-image {
-    width: 100%;
+    width: 45%;
+    /* position : relative; */
+    /* bottom : -15%; */
+    /* top : 20%; */
+    position: absolute;
+    bottom : -2%;
+    right : 2%;
+    z-index: 1;
 }
 
-@media only screen and (max-width : 768px){
+@media (max-width : 1024px){
     body{
-        background-image: url("images/background-without-basket.png");
+        background-image: url("images/clear-bg.png");
         background-size: cover;
+        /* height : 100vh; */
+        /* background-repeat: repeat; */
+        /* height : 100vh; */
+        /* height : auto; */
+        /* overflow :hidden; */
     }
     .content{
         flex-direction: column;
+        /* justify-content: space-between; */
+        /* gap : space; */
+        justify-content: start;
+        /* height: 98vh; */
+        margin-top: 0;
+        padding-top: 0;
     }
     .left-content{
         padding-left: 0;
         width : 100%;
         text-align: center;
         gap : 2rem;
+        line-height: 1.5;
+        height : 80%;
     }
     .contact{
         width : 100%;
+        margin-top: 0;
+    }
+    .right-content{
+        max-width: 100%;
     }
 
-    .logo{
-        text-align: left;
+    .bean-logo{
+        margin-top: 5%;
     }
+
+    h1{
+        font-size: 2rem;
+        margin-top: 1%;
+        margin-bottom: 4%;
+    }
+
+    .message-content{
+        color : #fff;
+        font-size: 1rem;
+        margin: 0;
+        padding : 0 0.5rem;
+    }
+    .soon{
+        display: block;
+    }
+
+    .contact-us{
+        font-size: 1rem;
+    }
+    .number{
+        font-size: 1.3rem;
+    }
+
+    .wood-image{
+        /* position : relative; */
+        /* bottom : 3.5rem; */
+    }
+
+    .basket-image{
+        /* position : relative;
+        top : 1.6rem; */
+        position: absolute;
+        bottom: -1%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20rem; /* Adjust width as needed */
+        z-index: 1;
+    }
+
+    .swiggy-mini{
+        top : 0;
+    }
+
+
+    .swiggy-mini p{
+        padding-top: 0;
+        margin-top: 0;
+    }
+    
 }
